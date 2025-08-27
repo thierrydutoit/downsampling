@@ -129,8 +129,9 @@ with st.expander("Open for comments"):
     - Downsampled fs: **{fs_ds} Hz** (Nyquist: **{ny_new:.0f} Hz**)
     
     **What to observe** 
-    - A rectangular wave contains **many odd harmonics**: {f0} Hz, 3·{f0}, 5·{f0}, …
+    - A rectangular wave contains **many harmonics**
     - With the filter **OFF**, harmonics above the new Nyquist (**{ny_new:.0f} Hz**) will **alias** (fold back) into lower frequencies.
     - With the filter **ON** (an 8th order Butterworth digital filter is used here), those high harmonics are attenuated before decimation, reducing aliasing in the downsampled FFT.
     """
+
     )

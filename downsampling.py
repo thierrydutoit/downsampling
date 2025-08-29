@@ -12,7 +12,7 @@ st.markdown('''Why do we need to low-pass a discrete signal before downsampling 
 # -----------------------
 # Fixed signal parameters (as requested)
 # -----------------------
-fs = 16000          # sampling frequency [Hz]
+fs = 8000          # sampling frequency [Hz]
 f0 = 150            # square-wave fundamental [Hz]
 duty = 60           # duty cycle [%]
 duration = 0.5      # seconds
@@ -72,7 +72,7 @@ def db_spectrum(x, fs):
 # -----------------------
 # Time-domain plot
 # -----------------------
-show_time = min(N, int(0.01 * fs))  # ~10 ms for clarity
+show_time = min(N, int(0.02 * fs))  # ~20 ms for clarity
 fig1, ax1 = plt.subplots(figsize=(10,4))
 ax1.plot(t[:show_time], sig[:show_time], "o-", markersize=2, label="Original", alpha=0.9)
 if apply_filter and factor > 1:
@@ -138,6 +138,7 @@ with st.expander("Open for comments"):
     """
 
     )
+
 
 
 

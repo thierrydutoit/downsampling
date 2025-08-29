@@ -74,7 +74,7 @@ def db_spectrum(x, fs):
 # -----------------------
 show_time = min(N, int(0.02 * fs))  # ~20 ms for clarity
 fig1, ax1 = plt.subplots(figsize=(10,4))
-ax1.plot(t[:show_time], sig[:show_time], "o-", label="Original", alpha=0.9)
+ax1.plot(t[:show_time], sig[:show_time], "o-", markersize=2, label="Original", alpha=0.9)
 if apply_filter and factor > 1:
     ax1.plot(t[:show_time], sig_proc[:show_time], label="Filtered (pre-downsample)", alpha=0.9)
 t_ds = np.arange(len(sig_ds)) / fs_ds
@@ -138,5 +138,6 @@ with st.expander("Open for comments"):
     """
 
     )
+
 
 

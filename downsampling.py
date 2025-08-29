@@ -132,6 +132,10 @@ with st.expander("Open for comments"):
     - A rectangular wave contains **many harmonics**
     - With the filter **OFF**, harmonics above the new Nyquist (**{ny_new:.0f} Hz**) will **alias** (fold back) into lower frequencies.
     - With the filter **ON** (an 8th order Butterworth digital filter is used here), those high harmonics are attenuated before decimation, reducing aliasing in the downsampled FFT.
+    
+    Notice that the downsampled signal in the "OFF" approach seems to be closer to the initial rectangle signal. In practice though, it sounds much worse than with the "ON" approach, 
+    and shows aliased frequency components before the new Nyquist frequency. 
     """
 
     )
+

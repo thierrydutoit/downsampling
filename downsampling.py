@@ -22,7 +22,7 @@ duration = 0.5      # seconds
 # -----------------------
 c1, c2 = st.columns(2)
 with c1:
-    factor = st.slider("Downsampling factor ×", 1, 16, 4, step=1)
+    factor = st.slider("Downsampling factor ×", 1, 16, 2, step=1)
 with c2:
     apply_filter = st.checkbox("Anti-aliasing low-pass (pre-decimate)", value=True)
 
@@ -138,6 +138,7 @@ with st.expander("Open for comments"):
     """
 
     )
+
 
 
 
